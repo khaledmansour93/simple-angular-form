@@ -1,27 +1,42 @@
 # SimpleAngularForm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+## Project Objective
 
-## Development server
+The goal of this project is to submit form and log its data in console using Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Components
 
-## Code scaffolding
+Our project consists of a form, a _submit_ button and a _reset_ button to clear form
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies used
 
-## Build
+- Angular
+- Bootstrap
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Development environment
 
-## Running unit tests
+- Nodejs v16.15.1
+- npm v8.11.0
+- Angular CLI v15.2.6
+- IDE: VS Code
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Procedures
 
-## Running end-to-end tests
+1. Create an Angular project called _simple-angular-form_ using the following command: ng new simple-angular-form
+2. Download and install [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) using npm
+3. Add the following path _"node_modules/bootstrap/dist/css/bootstrap.min.css"_ to _"styles"_ array in _angular.json_
+4. Create a component called _add-form_ using the following command: ng g c add-form
+5. Add form to template _add-form.component.html_
+6. Import _FormBuilder_ by adding _import { FormBuilder } from '@angular/forms';_ to _add-form.component.ts_
+7. Inject _FormBuilder_ into _add-form_ component class by adding _constructor(private formBuilder: FormBuilder) { }_
+8. Use the _group_ method to build the FormModel as shown in _add-form.component.ts_
+9. Edit _app.component.html_ by adding `<app-add-form></app-add-form>`
+10. Import _ReactiveFormsModule_ by adding _import { ReactiveFormsModule } from '@angular/forms';_ to _app.module.ts_
+11. Add _ReactiveFormsModule_ to imports array in _app.module.ts_
+12. Import _AddFormComponent_ by adding _import { AddFormComponent } from './add-form/add-form.component';_ to _app.module.ts_
+13. Add _AddFormComponent_ to declarations array in _app.module.ts_
+14. Build app using the following command: ng-serve-o and the output should appear as follows:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Simple angular form](https://user-images.githubusercontent.com/41340307/232776859-77ce2f81-0c48-4a09-89e8-509e59509be9.PNG)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Simple angular form 2](https://user-images.githubusercontent.com/41340307/232776865-25398f9a-f4b6-4a41-b6da-e50bc65384c5.PNG)

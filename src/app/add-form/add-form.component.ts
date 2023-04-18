@@ -23,7 +23,7 @@ export class AddFormComponent {
     sample10: ['']
   });
 
-  onSubmit(): void {
+  onSubmit(): void {  // On form submission, the code block here will execute
     console.warn('Your data has been submitted', this.creationForm.value);
     this.resetForm();
   }
